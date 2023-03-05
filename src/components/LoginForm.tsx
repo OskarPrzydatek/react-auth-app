@@ -43,6 +43,8 @@ const LoginForm: React.FC<ILoginFormProps> = ({ onLoginSubmit }) => {
           },
         })}
         errorMessage={errors.email?.message}
+        dataTestID="login-form-email-text-field"
+        validationMessageTestID="login-form-email-validation-message"
       />
       <TextField
         type="password"
@@ -51,8 +53,10 @@ const LoginForm: React.FC<ILoginFormProps> = ({ onLoginSubmit }) => {
           required: 'Password is required',
         })}
         errorMessage={errors.password?.message}
+        dataTestID="login-form-password-text-field"
+        validationMessageTestID="login-form-password-validation-message"
       />
-      <SubmitButton value={'Login'} />
+      <SubmitButton value="Login" dataTestID="login-form-submit-button" />
     </form>
   )
 }

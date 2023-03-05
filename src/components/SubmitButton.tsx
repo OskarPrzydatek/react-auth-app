@@ -1,10 +1,16 @@
 interface ISubmitButton {
   value: string
+  dataTestID?: string
 }
 
-const SubmitButton: React.FC<ISubmitButton> = ({ value }) => {
+const SubmitButton: React.FC<ISubmitButton> = ({ value, dataTestID }) => {
   return (
-    <input type="submit" className="input-clean submit-button" value={value} />
+    <input
+      type="submit"
+      className="input-clean submit-button"
+      value={value}
+      data-testid={dataTestID}
+    />
   )
 }
 

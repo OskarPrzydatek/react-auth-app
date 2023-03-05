@@ -8,7 +8,6 @@ export const post = async (url: string) => {
       method: 'POST',
       signal: controller.signal,
     })
-
     return response.json()
   } catch (error) {
     controller.abort()
