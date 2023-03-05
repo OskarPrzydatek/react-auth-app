@@ -8,7 +8,7 @@ const ValidationMessage: React.FC<IValidationMessage> = ({
   dataTestID,
 }) => {
   return (
-    <span className="text-field__error--mesage" data-testid={dataTestID}>
+    <span className="validation-mesage" data-testid={dataTestID}>
       {message}
     </span>
   )
