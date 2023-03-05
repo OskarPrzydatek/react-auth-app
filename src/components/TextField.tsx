@@ -1,4 +1,5 @@
 import React from 'react'
+
 import ValidationMessage from './ValidationMessage'
 
 interface ITextField extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -12,15 +13,15 @@ const TextField = React.forwardRef<HTMLInputElement, ITextField>(
     return (
       <label className="text-field">
         <input
-          className="input-clean text-field__input"
           ref={ref}
+          className="input-clean text-field__input"
           data-testid={dataTestID}
           {...props}
         />
         {errorMessage !== undefined ? (
           <ValidationMessage
-            message={errorMessage}
             dataTestID={validationMessageTestID}
+            message={errorMessage}
           />
         ) : null}
       </label>

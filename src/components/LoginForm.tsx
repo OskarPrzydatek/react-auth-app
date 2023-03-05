@@ -1,5 +1,6 @@
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+
 import SubmitButton from './SubmitButton'
 import TextField from './TextField'
 
@@ -42,21 +43,21 @@ const LoginForm: React.FC<ILoginFormProps> = ({ onLoginSubmit }) => {
             message: 'Please put email in valid form',
           },
         })}
-        errorMessage={errors.email?.message}
         dataTestID="login-form-email-text-field"
+        errorMessage={errors.email?.message}
         validationMessageTestID="login-form-email-validation-message"
       />
       <TextField
-        type="password"
         placeholder="password"
+        type="password"
         {...register('password', {
           required: 'Password is required',
         })}
-        errorMessage={errors.password?.message}
         dataTestID="login-form-password-text-field"
+        errorMessage={errors.password?.message}
         validationMessageTestID="login-form-password-validation-message"
       />
-      <SubmitButton value="Login" dataTestID="login-form-submit-button" />
+      <SubmitButton dataTestID="login-form-submit-button" value="Login" />
     </form>
   )
 }

@@ -6,10 +6,10 @@ interface ISubmitButton {
 const SubmitButton: React.FC<ISubmitButton> = ({ value, dataTestID }) => {
   return (
     <input
-      type="submit"
       className="input-clean submit-button"
-      value={value}
       data-testid={dataTestID}
+      type="submit"
+      value={value}
     />
   )
 }
